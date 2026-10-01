@@ -79,3 +79,102 @@
     </div>
   </div>
 </template>
+
+<script>
+import { ref } from "vue";
+import axios from "axios";
+import { useRounded } from "vue-router";
+import { useAuthStore} from "../stores/auth.js";
+
+const router = useRounded();
+const auth = useAuthStore();
+
+const form = ref({
+  username: "",
+  password: ""
+});
+
+const error = ref("");
+const loading = ref(false);
+
+
+const login = async () => {
+  error.value = "";
+
+  if(
+    !form.value.username ||
+    !form.value.password
+  ) {
+
+    error.value = 
+      "กรุณากรอก ชื่อผู้ใช้ และ รหัสผ่าน"
+    return;
+  }
+
+  try {
+    loading.value = true
+
+    const respose = await axios.post(
+      "http://localhost:3000/login",
+      {
+        username: form.value.username,
+        password: form.value.password
+      }
+    );
+
+    const data = respose.data;
+
+    if (
+      !data.token ||
+      !data.user
+    ) {
+      error.value = 
+        "ข้อมูล Login จาก Server ไม่ถูกต้อง";
+
+      return;
+    }
+
+    auth.login(
+      data.user,
+      data.token
+    );
+
+    switch (data.user.role) {
+      case "personnel":
+        await router.push("/personel");
+        break;
+      case "evaluatee":
+        await router.push("/evaluatee");
+        break;
+      case "evaluator":
+        await router.push("/evaluator");
+        break;
+      default:
+        error.value = 
+          "ไม่พบสิทธิ์การใช้งาน";
+        auth.logout();
+        return;
+    }
+  } catch (err) {
+    console.error(
+      "LOGIN ERROR:",
+    );
+
+    if (err.respose) {
+      error.value =
+        err.respose.data?.message ||
+        `เข้าสู่ระบบไม่สำเร็จ (${err.respose.status})`;
+    }
+    else if (err.respose) {
+      error.value = 
+        "ไม่สามารถเชื่อมต่อ backend ได้";
+    }
+    else {
+      error.value = 
+        "เกิดข้อผิดพลาดในการเข้าสู่ระบบ";
+    }
+  } finally {
+    loading.value = false;
+  }
+};
+</script>
