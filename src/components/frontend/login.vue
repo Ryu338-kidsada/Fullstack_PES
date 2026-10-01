@@ -26,12 +26,11 @@
   </div>
 </template>
 
-<script setup>
+<!-- <script setup>
 import { ref } from "vue";
 import axios from "axios";
-import { useRounded } from "vue-router";
-import { useAuthStore} from "../stores/auth.js";
-import { P } from "vue-router/dist/index-D7ja2BKs.js";
+
+
 
 const router = useRounded();
 const auth = useAuthStore();
@@ -113,4 +112,4 @@ const login = async () => {
     loading.value = false;
   }
 };
-</script>
+</script> -->
