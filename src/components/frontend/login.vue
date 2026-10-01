@@ -80,7 +80,7 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import { ref } from "vue";
 import axios from "axios";
 import { useRounded } from "vue-router";
