@@ -1,0 +1,19 @@
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+
+    container_name: hrsystem_frontend
+
+    ports:
+      - "5173:5173"
+    
+    volumes:
+      - .:/app
+      - /app/node_modules
+
+
+    restart: unless-stopped
+
+
