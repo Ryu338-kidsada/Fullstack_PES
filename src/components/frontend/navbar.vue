@@ -1,10 +1,10 @@
 <template>
   <header class="fixed inset-x-0 top-0 z-50 bg-white/90 backdrop-blur shadow">
-    <nav class="max-w-7x1 mx-auto px-6">
+    <nav class="max-w-7xl mx-auto px-6">
       <div class="flex h-16 items-center justify-between">
         <router-link to="/" class="flex items-center gap-3">
           <img src="" class="h-9 w-9" />
-          <span class="text-x1 font-bold text-blue-700 tracking-tight">ระบบประเมินบุคลากร</span>
+          <span class="text-xl font-bold text-blue-700 tracking-tight">ระบบประเมินบุคลากร</span>
         </router-link>
 
         <ul class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-700">

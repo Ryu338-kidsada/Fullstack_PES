@@ -1,7 +1,7 @@
 <template>
     <div class="w-full min-h-screen flex items-center justify-center bg-gray-100" style="font-family: 'Prompt', sans-serif;">
-        <main class="w-full max-w-4x1 px-6 py-8 bg-white rounded-lg shadow-md">
-            <h2 class="text-2x1 font-samibold mb-4 text-gray-800 text-center">
+        <main class="w-full max-w-4xl px-6 py-8 bg-white rounded-lg shadow-md">
+            <h2 class="text-2xl font-samibold mb-4 text-gray-800 text-center">
                 ยินดีต้อนรับเข้าสู่ระบบประเมินบุคลากร
             </h2>
             <p class="text-gray-600 mb-6 text-center">

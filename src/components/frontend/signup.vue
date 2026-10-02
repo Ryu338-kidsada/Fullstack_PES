@@ -1,6 +1,6 @@
 <template>
     <div class="min-h-screen flex items-center justify-center bg-gray-100 py-20">
-        <div class="bg-white w-full max-w-2x1 p-8 rounded-2x1 shadow-lg">
+        <div class="bg-white w-full max-w-2xl p-8 rounded-2xl shadow-lg">
             <h1 class="text-center text-gray-500 mb-2">สมัครสมาชิก</h1>
             <p class="text-center text-gray-500 mb-8">เลือกประเภทผู้ใช้งาน</p>
 
@@ -15,28 +15,28 @@
                 <div class="grid grid-cols-2 gap-4 mb-4">
                     <div>
                         <label class="block mb-2 font-medium">ชื่อ</label>
-                        <input v-model="form.fname" type="text" placeholder="ชื่อ" class="w-full border rounded-lg px-4 py-3" />
+                        <input v-model="form.fname" type="text" placeholder="ชื่อ" class="w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500" />
                     </div>
 
                     <div>
                         <label class="block mb-2 font-medium">นามสกุล</label>
-                        <input v-model="form.lname" type="text" placeholder="นามสกุล" class="w-full boder rounded-lg px-4 py-3" />
+                        <input v-model="form.lname" type="text" placeholder="นามสกุล" class="w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500" />
                     </div>
                 </div>
 
                 <div class="mb-4">
                     <label class="block mb-2 font-medium">Username</label>
-                    <input v-model="form.username" type="text" placeholder="Username" class="w-full border rounded0lg px-4 py-3" />
+                    <input v-model="form.username" type="text" placeholder="Username" class="w-full border rounded0lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500" />
                 </div>
 
                 <div class="mb-4">
                     <label class="block mb-2 font-medium">Password</label>
-                    <input v-model="form.password" type="password" placeholder="Password" class="w-full border rounded-lg px-4 py-3" />
+                    <input v-model="form.password" type="password" placeholder="Password" class="w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500" />
                 </div>
 
                 <div class="mb-6">
-                    <label class="block mb-2 font-medium">ยืนยัน Password</label>
-                    <input v-model="form.confirmPassword" type="password" placeholder="ยืนยัน Password" class="w-full border rounded-lg px-4 py-3" />
+                    <label class="block mb-2 font-medium">Confirm Password</label>
+                    <input v-model="form.confirmPassword" type="password" placeholder="ยืนยัน Password" class="w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500" />
                 </div>
 
                 <div v-if="error" class="bg-red-100 text-red-600 p-3 rounded-lg mb-4">{{ error }}</div>

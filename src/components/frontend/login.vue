@@ -1,7 +1,7 @@
 <template>
   <div class="min-h-screen flex items-center justify-center bg-gray-100">
-    <div class="bg-white w-full max-w-md p-8 rounded-2x1 shadow-lg">
-      <h1 class="text-3x1 font-bold text-center mb-2">HRsystem</h1>
+    <div class="bg-white w-full max-w-md p-8 rounded-2xl shadow-lg">
+      <h1 class="text-3xl font-bold text-center mb-2">HRsystem</h1>
       <p class="text-center text-gray-500 mb-8">ระบบประเมินบุคลากร</p>
 
       <div class="mb-4">
@@ -11,7 +11,7 @@
 
       <div class="mb-6">
         <label class="block mb-2 font-medium">Password</label>
-        <!-- <input v-model="form.password" type="password" placeholder="กรอก Password" /> -->
+        <!-- <input v-model="form.password" type="password" placeholder="กรอก Password" class="w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500" /> -->
       </div>
 
       <!-- <div v-if="error" class="bg-red-100 text-red-600 p-3 rounded-lg mb-4">{{ error }}</div> -->
