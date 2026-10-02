@@ -70,3 +70,41 @@
   </header>
 </template>
 
+<!-- <script setup>
+import { computed } from 'vue';
+import { useAuthStore } from "../stores/auth.js";
+
+const auth = useAuthStore();
+
+const avatarUrl = computed(() => {
+  if (!auth.user || !auth.user.avatar) {
+    return "/uploads/avatar.png";
+  }
+  return `http://localhost:3000/uploads/${auth.user.avatar}`;
+});
+
+const roleName = computed(() => {
+  switch (auth.role) {
+    case "personnal":
+      return "งานบุคลากร";
+    
+    case "evaluatee":
+      return "ผู้รับการประเมิน";
+
+    case "evaluator":
+      return "กรรมการ";
+
+    default:
+      return "ผู้ใช้งาน";
+  }
+});
+
+const handleAvatarError = (event) => {
+  event.traget.src = "/uploads/avatar.png";
+};
+
+const logout = () => {
+  auth.logout();
+};
+</script> -->
+
