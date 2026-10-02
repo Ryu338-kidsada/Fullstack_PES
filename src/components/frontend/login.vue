@@ -6,17 +6,17 @@
 
       <div class="mb-4">
         <label class="block mb-2 font-medium">Username</label>
-        <input v-model="form.username" type="text" placeholder="กรอก Username" class="w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"/>
+        <!-- <input v-model="form.username" type="text" placeholder="กรอก Username" class="w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"/> -->
       </div>
 
       <div class="mb-6">
         <label class="block mb-2 font-medium">Password</label>
-        <input v-model="form.password" type="password" placeholder="กรอก Password" />
+        <!-- <input v-model="form.password" type="password" placeholder="กรอก Password" /> -->
       </div>
 
-      <div v-if="error" class="bg-red-100 text-red-600 p-3 rounded-lg mb-4">{{ error }}</div>
+      <!-- <div v-if="error" class="bg-red-100 text-red-600 p-3 rounded-lg mb-4">{{ error }}</div> -->
 
-      <button @click="login" :disabled="loading" class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 disabled:opacity-50"> {{ loading ? "กำลังเข้าสู่ระบบ..." : "เข้าสู่ระบบ" }}</button>
+      <!-- <button @click="login" :disabled="loading" class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 disabled:opacity-50"> {{ loading ? "กำลังเข้าสู่ระบบ..." : "เข้าสู่ระบบ" }}</button> -->
 
       <div class="text-center mt-6">
         <span class="text-grat-500">ยังไม่มีบัญชี?</span>
