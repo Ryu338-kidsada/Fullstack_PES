@@ -3,7 +3,7 @@
     <nav class="max-w-7xl mx-auto px-6">
       <div class="flex h-16 items-center justify-between">
         <router-link to="/" class="flex items-center gap-3">
-          <img src="" class="h-9 w-9" />
+          <!-- <img src="" class="h-9 w-9" /> -->
           <span class="text-xl font-bold text-blue-700 tracking-tight">ระบบประเมินบุคลากร</span>
         </router-link>
 
